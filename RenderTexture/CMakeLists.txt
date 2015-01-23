@@ -1,0 +1,5 @@
+FILE(GLOB src "*.cpp")
+FILE(GLOB hdr "*.h")
+ADD_LIBRARY(RenderTexture ${src} ${hdr})
+INSTALL(TARGETS RenderTexture DESTINATION lib)
+#INSTALL(FILES ${hdr} DESTINATION include)

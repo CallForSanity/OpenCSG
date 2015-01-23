@@ -1,0 +1,6 @@
+FILE(GLOB src "*.cpp")
+FILE(GLOB hdr "*.h")
+ADD_EXECUTABLE(OpenCSGexample ${src} ${hdr})
+TARGET_LINK_LIBRARIES(OpenCSGexample OpenCSG RenderTexture ${GLUT_LIBRARIES})
+INSTALL(TARGETS OpenCSGexample DESTINATION lib)
+#INSTALL(FILES ${hdr} DESTINATION include)
