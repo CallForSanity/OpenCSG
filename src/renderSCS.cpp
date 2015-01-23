@@ -34,6 +34,7 @@
 #include "primitiveHelper.h"
 #include "scissorMemo.h"
 #include <map>
+#include <algorithm>
 
 namespace OpenCSG {
 
@@ -267,7 +268,7 @@ namespace OpenCSG {
 
         void renderIntersectedFront(const std::vector<Primitive*>& primitives) {
 
-            const int numberOfPrimitives = primitives.size();
+            const size_t numberOfPrimitives = primitives.size();
 
             glDepthMask(GL_TRUE);
 
@@ -414,7 +415,7 @@ namespace OpenCSG {
         bool subtractPrimitivesWithOcclusionQueries(std::vector<Batch>::const_iterator begin,
                                                     std::vector<Batch>::const_iterator end) {
 
-            const unsigned int numberOfBatches = end - begin;
+            const ptrdiff_t numberOfBatches = end - begin;
             if (numberOfBatches == 0) {
                 return true;
             }

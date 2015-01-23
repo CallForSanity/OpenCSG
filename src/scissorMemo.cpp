@@ -24,6 +24,7 @@
 #include "opencsgConfig.h"
 #include <opencsg.h>
 #include <GL/glew.h>
+#include <algorithm>
 #include "openglHelper.h"
 #include "scissorMemo.h"
 
